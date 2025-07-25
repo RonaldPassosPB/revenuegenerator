@@ -45,9 +45,10 @@ public class FooditemController {
     }
 
     //DELETE
-    @DeleteMapping
-    public ResponseEntity<Void> excluir(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
         service.excluir(id);
         return ResponseEntity.noContent().build();
     }
+
 }
